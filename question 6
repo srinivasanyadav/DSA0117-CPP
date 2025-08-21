@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+const double PI = 3.14159;
+
+class Circle {
+    double radius;
+
+public:
+    // Constructor to initialize radius
+    Circle(double r) {
+        radius = r;
+    }
+
+    // Function to calculate area
+    double area() {
+        return PI * radius * radius;
+    }
+};
+
+int main() {
+    Circle c(5.0);
+    cout << "Area of circle: " << c.area() << endl;
+    return 0;
+}
