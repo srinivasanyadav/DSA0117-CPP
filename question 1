@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+    string name;
+    int age;
+
+public:
+    // Default constructor
+    Student() {
+        name = "Unknown";
+        age = 0;
+    }
+
+    void display() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+
+class Rectangle {
+    int length, breadth;
+
+public:
+    // Parameterized constructor
+    Rectangle(int l, int b) {
+        length = l;
+        breadth = b;
+    }
+
+    int area() {
+        return length * breadth;
+    }
+
+    void display() {
+        cout << "Length: " << length << endl;
+        cout << "Breadth: " << breadth << endl;
+        cout << "Area: " << area() << endl;
+    }
+};
+
+int main() {
+    // Student object with default constructor
+    Student s1;
+    s1.display();
+
+    cout << endl;
+
+    // Rectangle object with parameterized constructor
+    Rectangle r1(5, 3);
+    r1.display();
+
+    return 0;
+}
