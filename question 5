@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+class Calculator {
+    double num1, num2;
+
+public:
+    // Constructor to initialize numbers
+    Calculator(double n1, double n2) {
+        num1 = n1;
+        num2 = n2;
+    }
+
+    // Function to calculate the sum
+    double add() {
+        return num1 + num2;
+    }
+};
+
+int main() {
+    Calculator calc(10.5, 20.3);
+    cout << "Sum: " << calc.add() << endl;
+    return 0;
+}
