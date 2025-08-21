@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class BankAccount {
+    int accountNumber;
+    double balance;
+
+public:
+    // Constructor with default arguments
+    BankAccount(int accNo = 0, double bal = 0.0) {
+        accountNumber = accNo;
+        balance = bal;
+    }
+
+    void display() {
+        cout << "Account Number: " << accountNumber
+             << ", Balance: " << balance << endl;
+    }
+};
+
+// --- Test Program ---
+int main() {
+    // Object with default values
+    BankAccount a1;  
+
+    // Object with only account number
+    BankAccount a2(12345);
+
+    // Object with account number and balance
+    BankAccount a3(67890, 5000.75);
+
+    cout << "Account 1: ";
+    a1.display();
+
+    cout << "Account 2: ";
+    a2.display();
+
+    cout << "Account 3: ";
+    a3.display();
+
+    return 0;
+}
