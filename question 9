@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+    int rollNo;
+    float marks;
+
+public:
+    // Constructor to initialize rollNo and marks
+    Student(int r, float m) {
+        rollNo = r;
+        marks = m;
+    }
+
+    void display() {
+        cout << "Roll No: " << rollNo << ", Marks: " << marks << endl;
+    }
+};
+
+int main() {
+    // Create an array of Student objects
+    Student students[] = {
+        Student(101, 88.5),
+        Student(102, 92.0),
+        Student(103, 79.5)
+    };
+
+    int n = sizeof(students) / sizeof(students[0]);
+
+    cout << "Student Details:\n";
+    for (int i = 0; i < n; i++) {
+        students[i].display();
+    }
+
+    return 0;
+}
