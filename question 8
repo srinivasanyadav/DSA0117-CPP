@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+class Employee {
+    string name;
+    double salary;
+
+public:
+    // Constructor to initialize name and salary
+    Employee(string n, double s) {
+        name = n;
+        salary = s;
+    }
+
+    // Function to display salary details
+    void displaySalary() {
+        cout << "Employee Name: " << name << ", Salary: " << salary << endl;
+    }
+};
+
+int main() {
+    Employee emp1("John Doe", 55000);
+    emp1.displaySalary();
+
+    return 0;
+}
