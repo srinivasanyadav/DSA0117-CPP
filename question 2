@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+class Box {
+    int length, width, height;
+
+public:
+    // Constructor with no arguments - cube of side 1
+    Box() {
+        length = width = height = 1;
+    }
+
+    // Constructor with one argument - cube with given side
+    Box(int side) {
+        length = width = height = side;
+    }
+
+    // Constructor with three arguments - rectangular box
+    Box(int l, int w, int h) {
+        length = l;
+        width = w;
+        height = h;
+    }
+
+    int volume() {
+        return length * width * height;
+    }
+
+    void display() {
+        cout << "Length: " << length
+             << ", Width: " << width
+             << ", Height: " << height 
+             << ", Volume: " << volume() << endl;
+    }
+};
+
+// --- Test program ---
+int main() {
+    Box b1;              // No-arg constructor
+    Box b2(5);           // One-arg constructor
+    Box b3(2, 3, 4);     // Three-arg constructor
+
+    cout << "Box 1: ";
+    b1.display();
+
+    cout << "Box 2: ";
+    b2.display();
+
+    cout << "Box 3: ";
+    b3.display();
+
+    return 0;
+}
